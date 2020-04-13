@@ -1,0 +1,98 @@
+<html>
+
+<style>
+
+body {
+scrollbar-base-color: green;
+scrollbar-arrow-color: green;
+background-color: white;
+scrollbar-face-color: green;
+scrollbar-base-color: green;
+text-align: left;
+color: black;
+}
+
+h1 { font-size: 100%; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  border: none;
+  margin-top: 3px; /* Prevent double borders */
+  background-color: white;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  position: relative;
+  outline: none;
+}
+
+ul li:hover {
+  background-color: #eee;
+}
+
+ul:select {
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+
+
+</style>
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<body>
+
+
+
+<ul id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+ <li><i class='fas fa-grip-vertical'></i>&nbsp;&nbsp;&nbsp;<img src="download.jpg" height="15%" width="10%">
+ Chinese Meat Dumplings <font color="lightgrey"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ </font>5,99 <br> 
+ <font color="lightgrey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;672 kcal per portion</font>
+ &nbsp;&nbsp;&nbsp;<font color="orange">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+<i class="fa fa-drumstick-bite"  style="font-size:24px;color:brown"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="fa fa-plus-circle" style="color:lightgreen"></i>
+</li>
+</ul><br><br>
+<ul id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69">
+ <li><i class='fas fa-grip-vertical'></i>&nbsp;&nbsp;&nbsp;<img src="download1.jpg" height="15%" width="10%">
+Bio Musli with Peach <font color="lightgrey"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$ </font>3,49 <br> 
+ <font color="lightgrey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;348 kcal per portion</font>
+ &nbsp;&nbsp;&nbsp;<font color="orange">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="add"><br>
+ 
+<i class='fas fa-lemon'></i>
+ <i class='fas fa-apple-alt' style="color:red;"></i><font color="lightgreen">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='fas fa-plus-circle'></i></span></li>
+</ul>
+
+
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+</script>
+</html>

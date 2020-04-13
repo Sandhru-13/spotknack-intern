@@ -1,0 +1,171 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: green;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: lightgreen;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px lightgrey;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  border: none;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: white;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  position: relative;
+}
+
+ul li:hover {
+  background-color: #eee;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+.close:hover {background: #bbb;}
+
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 10px;
+  cursor: pointer;
+  width:85%;
+}
+.button1 {border-radius: 12px;}
+button:focus {
+    outline: none !important;
+}
+</style>
+<body>
+ 
+<br>
+<br><hr> <br><b><font size="5">
+Create your<br> meal plan<br></b></font>
+<font color="lightgrey" size="3">
+ <b>for 19 Jan 2019</b></font>&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar"></i><br></font><br>
+ <font size="4">Breakfast:<br>
+ <ul>
+ <li><img src="download2.jpg" height="5%" width="10%">
+Tomato Omelette  <font color="lightgrey">$ </font>4,99 <br> <font color="lightgrey">489 kcal</font><span class="close">&times;</span></li>
+   
+</ul>
+<font size="4">Lunch:<br>
+ <ul>
+ <li><img src="download3.jpg" height="5%" width="10%">
+Fruit Yoghurt  <font color="lightgrey">$</font>2,29<br> <font color="lightgrey">223 kcal</font><span class="close">&times;</span></li>
+</ul>
+<br>
+<br><br>
+&nbsp;&nbsp;&nbsp;<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><center><placeholder><font color="lightgrey">Drop to Add</font></placeholder></center></div>
+<a href="#"><button class="button button1">save meals and pay $7.28</button></a>
+<script>
+var closebtns = document.getElementsByClassName("close");
+var i;
+
+for (i = 0; i < closebtns.length; i++) {
+  closebtns[i].addEventListener("click", function() {
+    this.parentElement.style.display = 'none';
+  });
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+
+</script>
+</body>
